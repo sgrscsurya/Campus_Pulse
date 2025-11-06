@@ -1,0 +1,87 @@
+EMERGENT PROJECT EXPORT COMMANDS FOR VSCODE WEB TERMINAL :
+
+export HOME=/root
+
+git init
+Reinitialized existing Git repository in /app/.git/
+
+git add .
+
+git config --global user.name "sgrscsurya"
+git config --global user.email "sgrscsurya@gmail.com"
+
+git commit -m "Version 1.0 First Initial Commit for Base Project!"
+[main 060b6ae] Version 1.0 First Initial Commit for Base Project!
+ 3 files changed, 11197 insertions(+), 1 deletion(-)
+ create mode 100644 frontend/yarn.lock
+ create mode 100644 yarn.lock
+ 
+git branch -M main
+
+git remote add origin https://github.com/sgrscsurya/Campus_Pulse_1.0.git
+
+git push -u origin main
+Enumerating objects: 187, done.
+Counting objects: 100% (187/187), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (177/177), done.
+Writing objects: 100% (187/187), 289.43 KiB | 11.13 MiB/s, done.
+Total 187 (delta 61), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (61/61), done.
+To https://github.com/sgrscsurya/Campus_Pulse_1.0.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+root@agent-env-f254dab7-8056-4cb6-a8f6-b980b179c056:/app# 
+
+
+
+
+
+DEPENDENCY CHANGES AND ADDITIONS IN package.json ( frontend ) and requirements.txt ( backend ) :
+
+In frontend/package.json :
+
+Update the below versions :
+
+    "date-fns": "^3.6.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    
+Add the below version just below "date-fns" :
+
+    "ajv": "^6.12.6",
+    "ajv-keywords": "^3.5.2",
+    
+DONE! Go to directory "frontend" and run command "npm install".
+
+
+
+In backend/requirements.txt :
+
+Change numpy version from "numpy==2.3.4" to 
+		
+		numpy==1.26.4
+		
+Open Emergent and run the preview of the Project in a new page! Don't close the tab and follow next steps.
+	
+After the above version change, Go to the "backend" directory and run the below commands.
+
+python3 -m venv venv
+
+source venv/bin/activate
+
+pip install -r requirements.txt
+
+uvicorn server:app --reload
+
+
+
+
+
+RUN COMMANDS FOR FRONTEND AND BACKEND :
+
+Frontend run commands :
+npm start
+
+Backend run commands :
+uvicorn server:app --reload
